@@ -9,7 +9,8 @@
       "Bash(npm run build)",
       "Bash(git commit -m \"Rebuild project with correct static export\")",
       "Bash(git commit -m \"Fix GitHub Pages CSS/JS paths with basePath configuration\")",
-      "Bash(git commit -m \"Remove basePath to fix CSS loading on GitHub Pages\")"
+      "Bash(git commit -m \"Remove basePath to fix CSS loading on GitHub Pages\")",
+      "Bash(git commit -m \"Switch back to peaceiris/actions-gh-pages for deployment\")"
     ],
     "deny": [],
     "ask": []
