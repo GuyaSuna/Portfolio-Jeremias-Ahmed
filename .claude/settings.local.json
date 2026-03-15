@@ -10,7 +10,13 @@
       "Bash(git commit -m \"Rebuild project with correct static export\")",
       "Bash(git commit -m \"Fix GitHub Pages CSS/JS paths with basePath configuration\")",
       "Bash(git commit -m \"Remove basePath to fix CSS loading on GitHub Pages\")",
-      "Bash(git commit -m \"Switch back to peaceiris/actions-gh-pages for deployment\")"
+      "Bash(git commit -m \"Switch back to peaceiris/actions-gh-pages for deployment\")",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/next.config.js)",
+      "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/next.config.js)",
+      "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/.github/workflows/deploy.yml)",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/.github/workflows)",
+      "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/.github/workflows/nextjs.yml)",
+      "Bash(git commit -m \"Use exact working configuration from my_profile repository\")"
     ],
     "deny": [],
     "ask": []
