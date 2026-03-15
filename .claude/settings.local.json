@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(npm run dev)",
-      "Bash(npm install @heroicons/react)"
+      "Bash(npm install @heroicons/react)",
+      "Bash(git add .)"
     ],
     "deny": [],
     "ask": []
