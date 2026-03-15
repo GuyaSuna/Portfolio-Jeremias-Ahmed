@@ -1,3 +1,5 @@
+'use client';
+
 import {
   TruckIcon,
   ShieldCheckIcon,
@@ -22,7 +24,7 @@ export default function Home() {
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
       {/* Navigation */}
-      <header className="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-6 lg:px-40 py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-6 lg:px-40 py-4">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <TruckIcon className="w-8 h-8 text-accent" />
@@ -32,38 +34,43 @@ export default function Home() {
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a
-              className="text-sm font-medium hover:text-accent transition-colors"
-              href="#sobre-mi"
+              className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
+              onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Sobre Mí
             </a>
             <a
-              className="text-sm font-medium hover:text-accent transition-colors"
-              href="#servicios"
+              className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
+              onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Servicios
             </a>
             <a
-              className="text-sm font-medium hover:text-accent transition-colors"
-              href="#experiencia"
+              className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
+              onClick={() => document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Experiencia
             </a>
             <a
-              className="text-sm font-medium hover:text-accent transition-colors"
-              href="#contacto"
+              className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
+              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contacto
             </a>
           </nav>
-          <button className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20">
-            Contactar
-          </button>
+          <a
+            href="/CV_Jeremias _Ahmed.pdf"
+            download="CV_Jeremias_Ahmed.pdf"
+            className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
+          >
+            <DocumentTextIcon className="w-4 h-4" />
+            Descargar CV
+          </a>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden">
+      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent z-10"></div>
           <img
@@ -88,10 +95,16 @@ export default function Home() {
               facturación y manejo de valores, destacándome por mi puntualidad, compromiso y capacidad para resolver problemas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform">
+              <button
+                onClick={() => document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform"
+              >
                 Ver Experiencia
               </button>
-              <button className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition-all">
+              <button
+                onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition-all"
+              >
                 Contactar Ahora
               </button>
             </div>
@@ -162,6 +175,79 @@ export default function Home() {
               <p className="text-sm text-slate-500">
                 Curso de Retrista CTU y Curso de Seguridad Vial CTU. Educación en Gastronomía UTU (2018-2021).
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Recommendation Letter Section */}
+      <section className="py-20 px-6 lg:px-40 bg-white dark:bg-background-dark">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="text-center mb-16 space-y-4">
+            <h2 className="text-3xl font-bold">Carta de Recomendación</h2>
+            <p className="text-slate-500 max-w-2xl mx-auto">
+              Referencia profesional que respalda mi trayectoria y desempeño laboral.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-xl font-bold flex items-center gap-2">
+                  <DocumentTextIcon className="w-6 h-6 text-accent" />
+                  Carta de Recomendación
+                </h3>
+                <a
+                  href="/Carta recomendación Jeremías-1.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2"
+                >
+                  <ShareIcon className="w-4 h-4" />
+                  Ver Documento
+                </a>
+              </div>
+
+              <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-600">
+                <div className="text-center mb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <StarIcon className="w-8 h-8 text-accent" />
+                  </div>
+                  <p className="text-slate-600 dark:text-slate-300 italic">
+                    "Documento oficial que certifica mi desempeño profesional y experiencia laboral,
+                    avalando mis competencias en el área de transporte y logística."
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">Aspectos Destacados:</h4>
+                    <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+                      <li className="flex items-center gap-2">
+                        <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        Responsabilidad y puntualidad
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        Excelente desempeño laboral
+                      </li>
+                      <li className="flex items-center gap-2">
+                        <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
+                        Compromiso con la seguridad
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-3">
+                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">Información:</h4>
+                    <div className="text-sm text-slate-600 dark:text-slate-400 space-y-1">
+                      <p><strong>Tipo:</strong> Carta de Recomendación Laboral</p>
+                      <p><strong>Formato:</strong> PDF Oficial</p>
+                      <p><strong>Disponible para:</strong> Descarga y consulta</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
