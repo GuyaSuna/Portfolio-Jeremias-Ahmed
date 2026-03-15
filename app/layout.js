@@ -2,7 +2,7 @@ import './globals.css'
 
 export const metadata = {
   title: 'Jeremías Ahmed | Chofer Profesional de Camiones y Maquinaria',
-  description: 'Chofer profesional con 4 años de experiencia en conducción de camiones y más de 2 años manejando maquinaria pesada. Libretas A, C, F y H.',
+  description: 'Profesional polivalente con sólida trayectoria en logística, distribución y soporte administrativo. Licencias de conducir categorías A, C, F y H. Ubicado en Juan Lacaze, Colonia, Uruguay.',
 }
 
 export default function RootLayout({ children }) {
