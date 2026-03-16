@@ -23,7 +23,8 @@
       "Bash(git commit -m \"Update 2025 employment history: Ponza Superga until Sept, Los Nietitos Nov-Dec\")",
       "Bash(git commit -m \"Fix CV download link to match actual filename\")",
       "Bash(git commit -m \"Improve About Me section layout with centered design and balanced content distribution\")",
-      "Bash(git commit -m \"Fix CV filename and references to resolve download issues\")"
+      "Bash(git commit -m \"Fix CV filename and references to resolve download issues\")",
+      "Bash(gh workflow list)"
     ],
     "deny": [],
     "ask": []
