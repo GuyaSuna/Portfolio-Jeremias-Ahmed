@@ -493,7 +493,7 @@ export default function Home() {
                 </div>
                 <h4 className="font-bold text-lg mb-1">Ponza Superga</h4>
                 <p className="text-sm text-slate-500 mb-1">Chofer</p>
-                <p className="text-xs text-slate-400">Sept 2024 - Actualidad</p>
+                <p className="text-xs text-slate-400">Sept 2024 - Dic 2024</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">

@@ -18,7 +18,8 @@
       "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/.github/workflows/nextjs.yml)",
       "Bash(git commit -m \"Use exact working configuration from my_profile repository\")",
       "Bash(git commit -m \"Improve mobile responsive design with hamburger menu, optimized layouts, and better form UX\")",
-      "Bash(git commit -m \"Fix recommendation letter responsive layout to prevent button overflow on mobile\")"
+      "Bash(git commit -m \"Fix recommendation letter responsive layout to prevent button overflow on mobile\")",
+      "Bash(git commit -m \"Update Ponza Superga employment end date\")"
     ],
     "deny": [],
     "ask": []
