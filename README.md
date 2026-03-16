@@ -79,4 +79,4 @@ https://[tu-usuario].github.io/[nombre-del-repositorio]/
 
 ## 📝 Licencia
 
-Este proyecto está bajo la Licencia MIT.
+Este proyecto está bajo la Licencia MIT.# Force rebuild for CV deployment
