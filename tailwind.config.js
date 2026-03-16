@@ -8,6 +8,9 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      screens: {
+        'xs': '475px',
+      },
       colors: {
         "primary": "#1152d4",
         "accent": "#d4af37",

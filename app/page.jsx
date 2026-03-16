@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import {
   TruckIcon,
   ShieldCheckIcon,
@@ -17,21 +18,26 @@ import {
   CogIcon,
   DocumentTextIcon,
   BuildingOfficeIcon,
+  Bars3Icon,
+  XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
       {/* Navigation */}
-      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-6 lg:px-40 py-4">
+      <header className="fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-4 sm:px-6 lg:px-40 py-4">
         <div className="max-w-[1200px] mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <TruckIcon className="w-8 h-8 text-accent" />
-            <h2 className="text-xl font-bold tracking-tight">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <TruckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
+            <h2 className="text-lg sm:text-xl font-bold tracking-tight">
               Jeremías<span className="text-accent">Ahmed</span>
             </h2>
           </div>
+
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <a
               className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
@@ -58,52 +64,123 @@ export default function Home() {
               Contacto
             </a>
           </nav>
+
+          {/* Desktop CV Button */}
           <a
             href="/CV_Jeremias _Ahmed.pdf"
             download="CV_Jeremias_Ahmed.pdf"
-            className="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 flex items-center gap-2"
+            className="hidden md:flex bg-primary hover:bg-primary/90 text-white px-4 lg:px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 items-center gap-2"
           >
             <DocumentTextIcon className="w-4 h-4" />
-            Descargar CV
+            <span className="hidden lg:inline">Descargar CV</span>
+            <span className="lg:hidden">CV</span>
           </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <XMarkIcon className="w-6 h-6" />
+            ) : (
+              <Bars3Icon className="w-6 h-6" />
+            )}
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-lg">
+            <nav className="px-4 py-6 space-y-4">
+              <a
+                className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
+                onClick={() => {
+                  document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Sobre Mí
+              </a>
+              <a
+                className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
+                onClick={() => {
+                  document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Servicios
+              </a>
+              <a
+                className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
+                onClick={() => {
+                  document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Experiencia
+              </a>
+              <a
+                className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
+                onClick={() => {
+                  document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                  setMobileMenuOpen(false);
+                }}
+              >
+                Contacto
+              </a>
+              <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
+                <a
+                  href="/CV_Jeremias _Ahmed.pdf"
+                  download="CV_Jeremias_Ahmed.pdf"
+                  className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold transition-all w-full"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  <DocumentTextIcon className="w-4 h-4" />
+                  Descargar CV
+                </a>
+              </div>
+            </nav>
+          </div>
+        )}
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[85vh] w-full flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-[85vh] w-full flex items-center justify-center overflow-hidden pt-20 sm:pt-24">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/60 to-transparent z-10"></div>
           <img
             alt="Luxury Car Interior"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover object-center"
             src="https://img3.wallspic.com/previews/5/8/1/2/2/122185/122185-freightliner_camiones-x750.jpg"
           />
         </div>
-        <div className="relative z-20 max-w-[1200px] w-full px-6 lg:px-40">
-          <div className="max-w-2xl space-y-6">
-            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-3 py-1 rounded-full text-accent text-xs font-bold uppercase tracking-wider">
-              <TruckIcon className="w-4 h-4" />
-              Chofer Profesional Certificado
+        <div className="relative z-20 max-w-[1200px] w-full px-4 sm:px-6 lg:px-40 py-8 sm:py-12">
+          <div className="max-w-2xl space-y-4 sm:space-y-6">
+            <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-3 py-1 rounded-full text-accent text-xs sm:text-xs font-bold uppercase tracking-wider">
+              <TruckIcon className="w-3 h-3 sm:w-4 sm:h-4" />
+              <span className="hidden xs:inline">Chofer Profesional Certificado</span>
+              <span className="xs:hidden">Chofer Certificado</span>
             </div>
-            <h1 className="text-4xl md:text-6xl font-black leading-tight text-white">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
               Chofer Profesional de{" "}
-              <span className="text-accent">Camiones y Maquinaria Pesada</span>
+              <span className="text-accent block sm:inline">Camiones y Maquinaria Pesada</span>
             </h1>
-            <p className="text-lg text-slate-300">
+            <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">
               Profesional polivalente con sólida trayectoria en logística, distribución y soporte administrativo.
               Cuento con licencias de conducir categorías A, C, F y H. Experiencia comprobada en gestión de mercadería,
               facturación y manejo de valores, destacándome por mi puntualidad, compromiso y capacidad para resolver problemas.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <button
                 onClick={() => document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:scale-105 transition-transform"
+                className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:scale-105 transition-transform text-sm sm:text-base"
               >
                 Ver Experiencia
               </button>
               <button
                 onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-8 py-4 rounded-lg font-bold hover:bg-white/20 transition-all"
+                className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-white/20 transition-all text-sm sm:text-base"
               >
                 Contactar Ahora
               </button>
@@ -114,13 +191,13 @@ export default function Home() {
 
       {/* Stats/About Brief */}
       <section
-        className="py-20 px-6 lg:px-40 bg-slate-50 dark:bg-slate-900/50"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-40 bg-slate-50 dark:bg-slate-900/50"
         id="sobre-mi"
       >
-        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tight">Sobre Mí</h2>
-            <p className="text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
+          <div className="space-y-4 sm:space-y-6">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Sobre Mí</h2>
+            <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               Chofer profesional con 4 años de experiencia en conducción de
               camiones y más de 2 años manejando maquinaria pesada. He trabajado
               en empresas reconocidas como Ponza Superga, Veleta AgroNegocios y
@@ -129,50 +206,50 @@ export default function Home() {
               vehículo y el cumplimiento de los tiempos de trabajo. Cuento con
               libretas A, C, F y H.
             </p>
-            <div className="grid grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-accent">4</div>
-                <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+            <div className="grid grid-cols-2 gap-4 sm:gap-6">
+              <div className="space-y-1 sm:space-y-2 text-center sm:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent">4</div>
+                <div className="text-xs sm:text-sm font-medium uppercase tracking-wide opacity-70">
                   Años de Experiencia
                 </div>
               </div>
-              <div className="space-y-2">
-                <div className="text-3xl font-bold text-accent">4</div>
-                <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+              <div className="space-y-1 sm:space-y-2 text-center sm:text-left">
+                <div className="text-2xl sm:text-3xl font-bold text-accent">4</div>
+                <div className="text-xs sm:text-sm font-medium uppercase tracking-wide opacity-70">
                   Licencias de Conducir
                 </div>
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
-              <TruckIcon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-bold mb-2">Experiencia en Camiones</h3>
-              <p className="text-sm text-slate-500">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
+              <TruckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
+              <h3 className="font-bold mb-2 text-sm sm:text-base">Experiencia en Camiones</h3>
+              <p className="text-xs sm:text-sm text-slate-500">
                 4 años de experiencia en conducción de camiones de diferentes
                 tipos y capacidades.
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
-              <ShieldCheckIcon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-bold mb-2">Responsabilidad</h3>
-              <p className="text-sm text-slate-500">
+            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
+              <ShieldCheckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
+              <h3 className="font-bold mb-2 text-sm sm:text-base">Responsabilidad</h3>
+              <p className="text-xs sm:text-sm text-slate-500">
                 Trabajo ordenado, responsable y comprometido con la seguridad en
                 todo momento.
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
-              <ClockIcon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-bold mb-2">Puntualidad</h3>
-              <p className="text-sm text-slate-500">
+            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
+              <ClockIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
+              <h3 className="font-bold mb-2 text-sm sm:text-base">Puntualidad</h3>
+              <p className="text-xs sm:text-sm text-slate-500">
                 Cumplimiento estricto de horarios y tiempos de trabajo
                 establecidos.
               </p>
             </div>
-            <div className="p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
-              <BriefcaseIcon className="w-8 h-8 text-primary mb-4" />
-              <h3 className="font-bold mb-2">Formación Especializada</h3>
-              <p className="text-sm text-slate-500">
+            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm sm:col-span-2">
+              <BriefcaseIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
+              <h3 className="font-bold mb-2 text-sm sm:text-base">Formación Especializada</h3>
+              <p className="text-xs sm:text-sm text-slate-500">
                 Curso de Retrista CTU y Curso de Seguridad Vial CTU. Educación en Gastronomía UTU (2018-2021).
               </p>
             </div>
@@ -469,105 +546,105 @@ export default function Home() {
 
       {/* Contact CTA Section */}
       <section
-        className="py-20 px-6 lg:px-40 bg-slate-900 text-white relative overflow-hidden"
+        className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-40 bg-slate-900 text-white relative overflow-hidden"
         id="contacto"
       >
         {/* Abstract gradient background */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent pointer-events-none"></div>
-        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-16 relative z-10">
-          <div className="space-y-8">
+        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 relative z-10">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h2 className="text-4xl font-black mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-3 sm:mb-4">
                 ¿Necesita un chofer profesional?
               </h2>
-              <p className="text-slate-400 text-lg">
+              <p className="text-slate-400 text-sm sm:text-base lg:text-lg">
                 Contáctame para discutir tus necesidades de transporte. Chofer
                 profesional con experiencia en camiones y maquinaria pesada.
               </p>
             </div>
-            <div className="space-y-6">
-              <div className="flex items-center gap-4">
-                <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                  <PhoneIcon className="w-6 h-6" />
+            <div className="space-y-4 sm:space-y-6">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="size-10 sm:size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                  <PhoneIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-400">
+                  <div className="text-xs sm:text-sm text-slate-400">
                     Teléfono y WhatsApp
                   </div>
-                  <div className="text-lg font-bold">
+                  <div className="text-base sm:text-lg font-bold">
                     +598 92 413 034
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                  <EnvelopeIcon className="w-6 h-6" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="size-10 sm:size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                  <EnvelopeIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-400">
+                  <div className="text-xs sm:text-sm text-slate-400">
                     Correo Electrónico
                   </div>
-                  <div className="text-lg font-bold">
+                  <div className="text-base sm:text-lg font-bold break-all sm:break-normal">
                     jeremiasahmed21@gmail.com
                   </div>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
-                  <MapPinIcon className="w-6 h-6" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="size-10 sm:size-12 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+                  <MapPinIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-400">Ubicación</div>
-                  <div className="text-lg font-bold">Juan Lacaze, Colonia, Uruguay</div>
+                  <div className="text-xs sm:text-sm text-slate-400">Ubicación</div>
+                  <div className="text-base sm:text-lg font-bold">Juan Lacaze, Colonia, Uruguay</div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10">
+          <div className="bg-white/5 backdrop-blur-md p-4 sm:p-6 lg:p-8 rounded-2xl border border-white/10">
             <form
               action="https://formsubmit.co/jeremiasahmed21@gmail.com"
               method="POST"
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
             >
               {/* Formsubmit Configuration */}
               <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio - Jeremías Ahmed" />
               <input type="hidden" name="_template" value="table" />
               <input type="hidden" name="_next" value="https://jeremiasahmed21.github.io/Portfolio-Jeremias-Ahmed/success" />
 
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="space-y-1 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Nombre
                   </label>
                   <input
                     name="nombre"
                     required
-                    className="w-full bg-white/10 border-white/20 rounded-lg px-4 py-3 focus:ring-accent focus:border-accent text-white"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 focus:ring-accent focus:border-accent text-white text-sm sm:text-base"
                     placeholder="Su nombre"
                     type="text"
                   />
                 </div>
-                <div className="space-y-2">
+                <div className="space-y-1 sm:space-y-2">
                   <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                     Teléfono
                   </label>
                   <input
                     name="telefono"
                     required
-                    className="w-full bg-white/10 border-white/20 rounded-lg px-4 py-3 focus:ring-accent focus:border-accent text-white"
+                    className="w-full bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 focus:ring-accent focus:border-accent text-white text-sm sm:text-base"
                     placeholder="Tu teléfono"
                     type="tel"
                   />
                 </div>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Tipo de Trabajo
                 </label>
                 <select
                   name="tipo_trabajo"
                   required
-                  className="w-full bg-white/10 border-white/20 rounded-lg px-4 py-3 focus:ring-accent focus:border-accent text-white appearance-none"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 focus:ring-accent focus:border-accent text-white appearance-none text-sm sm:text-base"
                 >
                   <option className="bg-slate-900">
                     Conducción de Camiones
@@ -581,20 +658,20 @@ export default function Home() {
                   </option>
                 </select>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Mensaje
                 </label>
                 <textarea
                   name="mensaje"
                   required
-                  className="w-full bg-white/10 border-white/20 rounded-lg px-4 py-3 focus:ring-accent focus:border-accent text-white h-32"
+                  className="w-full bg-white/10 border border-white/20 rounded-lg px-3 sm:px-4 py-2.5 sm:py-3 focus:ring-accent focus:border-accent text-white h-24 sm:h-32 text-sm sm:text-base resize-none"
                   placeholder="Describe los detalles del trabajo, tipo de vehículo o maquinaria..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full bg-accent text-background-dark font-black py-4 rounded-lg hover:bg-accent/90 transition-all uppercase tracking-widest"
+                className="w-full bg-accent text-background-dark font-black py-3 sm:py-4 rounded-lg hover:bg-accent/90 transition-all uppercase tracking-widest text-sm sm:text-base"
               >
                 Enviar Mensaje
               </button>
