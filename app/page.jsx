@@ -642,7 +642,7 @@ export default function Home() {
               {/* Formsubmit Configuration */}
               <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio - Jeremías Ahmed" />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://jeremiasahmed21.github.io/Portfolio-Jeremias-Ahmed/success" />
+              <input type="hidden" name="_next" value="https://guyasuna.github.io/Portfolio-Jeremias-Ahmed/success" />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="space-y-1 sm:space-y-2">

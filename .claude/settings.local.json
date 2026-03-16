@@ -31,7 +31,8 @@
       "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/src)",
       "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/src/app)",
       "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/src/app/page.js)",
-      "Bash(git commit -m \"Force GitHub Pages deployment with .nojekyll and updated README\")"
+      "Bash(git commit -m \"Force GitHub Pages deployment with .nojekyll and updated README\")",
+      "Bash(git commit -m \"Fix form redirect URL to use correct GitHub Pages domain\")"
     ],
     "deny": [],
     "ask": []
