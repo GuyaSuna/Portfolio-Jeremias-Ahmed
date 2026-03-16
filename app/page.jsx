@@ -201,7 +201,7 @@ export default function Home() {
               Chofer profesional con 4 años de experiencia en conducción de
               camiones y más de 2 años manejando maquinaria pesada. He trabajado
               en empresas reconocidas como Los Nietitos, Ponza Superga, Veleta AgroNegocios y
-              Superga S.R.L. Me destaco por trabajar de forma ordenada, puntual
+              Superga. Me destaco por trabajar de forma ordenada, puntual
               y responsable, priorizando siempre la seguridad, el cuidado del
               vehículo y el cumplimiento de los tiempos de trabajo. Cuento con
               libretas A, C, F y H.
@@ -493,7 +493,7 @@ export default function Home() {
                 </div>
                 <h4 className="font-bold text-lg mb-1">Ponza Superga</h4>
                 <p className="text-sm text-slate-500 mb-1">Chofer</p>
-                <p className="text-xs text-slate-400">Ene 2025 - Sept 2025</p>
+                <p className="text-xs text-slate-400">Sept 2024 - Sept 2025</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -515,7 +515,7 @@ export default function Home() {
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <BuildingOfficeIcon className="w-6 h-6" />
                 </div>
-                <h4 className="font-bold text-lg mb-1">Superga S.R.L</h4>
+                <h4 className="font-bold text-lg mb-1">Superga</h4>
                 <p className="text-sm text-slate-500 mb-1">Auxiliar Administrativo</p>
                 <p className="text-xs text-slate-400">Ene 2021 - Dic 2021</p>
               </div>
