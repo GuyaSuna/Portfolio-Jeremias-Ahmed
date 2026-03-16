@@ -579,7 +579,9 @@ export default function Home() {
                   <BuildingOfficeIcon className="w-6 h-6" />
                 </div>
                 <h4 className="font-bold text-lg mb-1">Los Nietitos</h4>
-                <p className="text-sm text-slate-500 mb-1">Guinchero</p>
+                <p className="text-sm text-slate-500 mb-1">
+                  Trabajo de deposito
+                </p>
                 <p className="text-xs text-slate-400">Nov 2025 - Dic 2025</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
