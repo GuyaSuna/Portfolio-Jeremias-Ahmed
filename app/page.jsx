@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import {
   TruckIcon,
   ShieldCheckIcon,
@@ -50,25 +50,41 @@ export default function Home() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
-              onClick={() => document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("sobre-mi")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Sobre Mí
             </a>
             <a
               className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
-              onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("servicios")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Servicios
             </a>
             <a
               className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
-              onClick={() => document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("experiencia")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Experiencia
             </a>
             <a
               className="text-sm font-medium hover:text-accent transition-colors cursor-pointer"
-              onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() =>
+                document
+                  .getElementById("contacto")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Contacto
             </a>
@@ -104,7 +120,9 @@ export default function Home() {
               <a
                 className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
                 onClick={() => {
-                  document.getElementById('sobre-mi')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById("sobre-mi")
+                    ?.scrollIntoView({ behavior: "smooth" });
                   setMobileMenuOpen(false);
                 }}
               >
@@ -113,7 +131,9 @@ export default function Home() {
               <a
                 className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
                 onClick={() => {
-                  document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById("servicios")
+                    ?.scrollIntoView({ behavior: "smooth" });
                   setMobileMenuOpen(false);
                 }}
               >
@@ -122,7 +142,9 @@ export default function Home() {
               <a
                 className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
                 onClick={() => {
-                  document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById("experiencia")
+                    ?.scrollIntoView({ behavior: "smooth" });
                   setMobileMenuOpen(false);
                 }}
               >
@@ -131,7 +153,9 @@ export default function Home() {
               <a
                 className="block text-base font-medium hover:text-accent transition-colors cursor-pointer py-2"
                 onClick={() => {
-                  document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
+                  document
+                    .getElementById("contacto")
+                    ?.scrollIntoView({ behavior: "smooth" });
                   setMobileMenuOpen(false);
                 }}
               >
@@ -168,27 +192,41 @@ export default function Home() {
           <div className="max-w-2xl space-y-4 sm:space-y-6">
             <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/20 px-3 py-1 rounded-full text-accent text-xs sm:text-xs font-bold uppercase tracking-wider">
               <TruckIcon className="w-3 h-3 sm:w-4 sm:h-4" />
-              <span className="hidden xs:inline">Chofer Profesional Certificado</span>
+              <span className="hidden xs:inline">
+                Chofer Profesional Certificado
+              </span>
               <span className="xs:hidden">Chofer Certificado</span>
             </div>
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight text-white">
               Chofer Profesional de{" "}
-              <span className="text-accent block sm:inline">Camiones y Maquinaria Pesada</span>
+              <span className="text-accent block sm:inline">
+                Camiones y Maquinaria Pesada
+              </span>
             </h1>
             <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed">
-              Profesional polivalente con sólida trayectoria en logística, distribución y soporte administrativo.
-              Cuento con licencias de conducir categorías A, C, F y H. Experiencia comprobada en gestión de mercadería,
-              facturación y manejo de valores, destacándome por mi puntualidad, compromiso y capacidad para resolver problemas.
+              Profesional polivalente con sólida trayectoria en logística,
+              distribución y soporte administrativo. Cuento con licencias de
+              conducir categorías A, C, F y H. Experiencia comprobada en gestión
+              de mercadería, facturación y manejo de valores, destacándome por
+              mi puntualidad, compromiso y capacidad para resolver problemas.
             </p>
             <div className="flex flex-col xs:flex-row gap-3 sm:gap-4 pt-2 sm:pt-4">
               <button
-                onClick={() => document.getElementById('experiencia')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("experiencia")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:scale-105 transition-transform text-sm sm:text-base"
               >
                 Ver Experiencia
               </button>
               <button
-                onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() =>
+                  document
+                    .getElementById("contacto")
+                    ?.scrollIntoView({ behavior: "smooth" })
+                }
                 className="bg-white/10 backdrop-blur-sm border border-white/20 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold hover:bg-white/20 transition-all text-sm sm:text-base"
               >
                 Contactar Ahora
@@ -206,40 +244,50 @@ export default function Home() {
         <div className="max-w-[1200px] mx-auto space-y-12">
           {/* Header */}
           <div className="text-center space-y-4">
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Sobre Mí</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">
+              Sobre Mí
+            </h2>
             <p className="text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-4xl mx-auto">
               Chofer profesional con 4 años de experiencia en conducción de
               camiones y más de 2 años manejando maquinaria pesada. He trabajado
-              en empresas reconocidas como Los Nietitos, Ponza Superga, Veleta AgroNegocios y
-              Superga. Me destaco por trabajar de forma ordenada, puntual
-              y responsable, priorizando siempre la seguridad, el cuidado del
-              vehículo y el cumplimiento de los tiempos de trabajo. Cuento con
-              libretas A, C, F y H.
+              en empresas reconocidas como Los Nietitos, Ponza Superga, Veleta
+              AgroNegocios y Superga. Me destaco por trabajar de forma ordenada,
+              puntual y responsable, priorizando siempre la seguridad, el
+              cuidado del vehículo y el cumplimiento de los tiempos de trabajo.
+              Cuento con libretas A, C, F y H.
             </p>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">4</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">
+                4
+              </div>
               <div className="text-sm font-medium uppercase tracking-wide opacity-70">
                 Años de Experiencia
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">4</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">
+                4
+              </div>
               <div className="text-sm font-medium uppercase tracking-wide opacity-70">
                 Licencias de Conducir
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">
+                5
+              </div>
               <div className="text-sm font-medium uppercase tracking-wide opacity-70">
                 Empresas de Experiencia
               </div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">100%</div>
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">
+                100%
+              </div>
               <div className="text-sm font-medium uppercase tracking-wide opacity-70">
                 Responsabilidad
               </div>
@@ -250,7 +298,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <TruckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
-              <h3 className="font-bold mb-2 text-sm sm:text-base">Experiencia en Camiones</h3>
+              <h3 className="font-bold mb-2 text-sm sm:text-base">
+                Experiencia en Camiones
+              </h3>
               <p className="text-xs sm:text-sm text-slate-500">
                 4 años de experiencia en conducción de camiones de diferentes
                 tipos y capacidades.
@@ -258,7 +308,9 @@ export default function Home() {
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <ShieldCheckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
-              <h3 className="font-bold mb-2 text-sm sm:text-base">Responsabilidad</h3>
+              <h3 className="font-bold mb-2 text-sm sm:text-base">
+                Responsabilidad
+              </h3>
               <p className="text-xs sm:text-sm text-slate-500">
                 Trabajo ordenado, responsable y comprometido con la seguridad en
                 todo momento.
@@ -266,7 +318,9 @@ export default function Home() {
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <ClockIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
-              <h3 className="font-bold mb-2 text-sm sm:text-base">Puntualidad</h3>
+              <h3 className="font-bold mb-2 text-sm sm:text-base">
+                Puntualidad
+              </h3>
               <p className="text-xs sm:text-sm text-slate-500">
                 Cumplimiento estricto de horarios y tiempos de trabajo
                 establecidos.
@@ -274,9 +328,12 @@ export default function Home() {
             </div>
             <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <BriefcaseIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
-              <h3 className="font-bold mb-2 text-sm sm:text-base">Formación Especializada</h3>
+              <h3 className="font-bold mb-2 text-sm sm:text-base">
+                Formación Especializada
+              </h3>
               <p className="text-xs sm:text-sm text-slate-500">
-                Curso de Retrista CTU y Curso de Seguridad Vial CTU. Educación en Gastronomía UTU (2018-2021).
+                Curso de Retrista CTU y Curso de Seguridad Vial CTU. Educación
+                en Gastronomía UTU (2018-2021).
               </p>
             </div>
           </div>
@@ -289,7 +346,8 @@ export default function Home() {
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl font-bold">Carta de Recomendación</h2>
             <p className="text-slate-500 max-w-2xl mx-auto">
-              Referencia profesional que respalda mi trayectoria y desempeño laboral.
+              Referencia profesional que respalda mi trayectoria y desempeño
+              laboral.
             </p>
           </div>
 
@@ -317,14 +375,17 @@ export default function Home() {
                     <StarIcon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
                   <p className="text-slate-600 dark:text-slate-300 italic text-sm sm:text-base">
-                    "Documento oficial que certifica mi desempeño profesional y experiencia laboral,
-                    avalando mis competencias en el área de transporte y logística."
+                    "Documento oficial que certifica mi desempeño profesional y
+                    experiencia laboral, avalando mis competencias en el área de
+                    transporte y logística."
                   </p>
                 </div>
 
                 <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6">
                   <div className="space-y-3">
-                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">Aspectos Destacados:</h4>
+                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">
+                      Aspectos Destacados:
+                    </h4>
                     <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
                       <li className="flex items-center gap-2">
                         <CheckCircleIcon className="w-4 h-4 text-green-500 flex-shrink-0" />
@@ -342,11 +403,19 @@ export default function Home() {
                   </div>
 
                   <div className="space-y-3">
-                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">Información:</h4>
+                    <h4 className="font-semibold text-slate-800 dark:text-slate-200">
+                      Información:
+                    </h4>
                     <div className="text-sm text-slate-600 dark:text-slate-400 space-y-1">
-                      <p><strong>Tipo:</strong> Carta de Recomendación Laboral</p>
-                      <p><strong>Formato:</strong> PDF Oficial</p>
-                      <p><strong>Disponible para:</strong> Descarga y consulta</p>
+                      <p>
+                        <strong>Tipo:</strong> Carta de Recomendación Laboral
+                      </p>
+                      <p>
+                        <strong>Formato:</strong> PDF Oficial
+                      </p>
+                      <p>
+                        <strong>Disponible para:</strong> Descarga y consulta
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -542,7 +611,9 @@ export default function Home() {
                   <BuildingOfficeIcon className="w-6 h-6" />
                 </div>
                 <h4 className="font-bold text-lg mb-1">Superga</h4>
-                <p className="text-sm text-slate-500 mb-1">Auxiliar Administrativo</p>
+                <p className="text-sm text-slate-500 mb-1">
+                  Auxiliar Administrativo
+                </p>
                 <p className="text-xs text-slate-400">Ene 2021 - Dic 2021</p>
               </div>
             </div>
@@ -558,7 +629,7 @@ export default function Home() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="text-center p-4 bg-white/50 dark:bg-background-dark/50 rounded-lg">
                 <div className="text-2xl font-black text-primary mb-2">A</div>
-                <div className="text-sm font-medium">Motocicletas</div>
+                <div className="text-sm font-medium">Automoviles</div>
               </div>
               <div className="text-center p-4 bg-white/50 dark:bg-background-dark/50 rounded-lg">
                 <div className="text-2xl font-black text-primary mb-2">C</div>
@@ -566,11 +637,11 @@ export default function Home() {
               </div>
               <div className="text-center p-4 bg-white/50 dark:bg-background-dark/50 rounded-lg">
                 <div className="text-2xl font-black text-primary mb-2">F</div>
-                <div className="text-sm font-medium">Maquinaria</div>
+                <div className="text-sm font-medium">Ómnibus</div>
               </div>
               <div className="text-center p-4 bg-white/50 dark:bg-background-dark/50 rounded-lg">
                 <div className="text-2xl font-black text-primary mb-2">H</div>
-                <div className="text-sm font-medium">Transporte Especial</div>
+                <div className="text-sm font-medium">Maquinaria</div>
               </div>
             </div>
           </div>
@@ -627,8 +698,12 @@ export default function Home() {
                   <MapPinIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
                 <div>
-                  <div className="text-xs sm:text-sm text-slate-400">Ubicación</div>
-                  <div className="text-base sm:text-lg font-bold">Juan Lacaze, Colonia, Uruguay</div>
+                  <div className="text-xs sm:text-sm text-slate-400">
+                    Ubicación
+                  </div>
+                  <div className="text-base sm:text-lg font-bold">
+                    Juan Lacaze, Colonia, Uruguay
+                  </div>
                 </div>
               </div>
             </div>
@@ -640,9 +715,17 @@ export default function Home() {
               className="space-y-3 sm:space-y-4"
             >
               {/* Formsubmit Configuration */}
-              <input type="hidden" name="_subject" value="Nuevo mensaje desde Portfolio - Jeremías Ahmed" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo mensaje desde Portfolio - Jeremías Ahmed"
+              />
               <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_next" value="https://guyasuna.github.io/Portfolio-Jeremias-Ahmed/success" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://guyasuna.github.io/Portfolio-Jeremias-Ahmed/success"
+              />
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 <div className="space-y-1 sm:space-y-2">
