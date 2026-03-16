@@ -194,10 +194,11 @@ export default function Home() {
         className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-40 bg-slate-50 dark:bg-slate-900/50"
         id="sobre-mi"
       >
-        <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-          <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">Sobre Mí</h2>
-            <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+        <div className="max-w-[1200px] mx-auto space-y-12">
+          {/* Header */}
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight">Sobre Mí</h2>
+            <p className="text-lg sm:text-xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-4xl mx-auto">
               Chofer profesional con 4 años de experiencia en conducción de
               camiones y más de 2 años manejando maquinaria pesada. He trabajado
               en empresas reconocidas como Los Nietitos, Ponza Superga, Veleta AgroNegocios y
@@ -206,22 +207,38 @@ export default function Home() {
               vehículo y el cumplimiento de los tiempos de trabajo. Cuento con
               libretas A, C, F y H.
             </p>
-            <div className="grid grid-cols-2 gap-4 sm:gap-6">
-              <div className="space-y-1 sm:space-y-2 text-center sm:text-left">
-                <div className="text-2xl sm:text-3xl font-bold text-accent">4</div>
-                <div className="text-xs sm:text-sm font-medium uppercase tracking-wide opacity-70">
-                  Años de Experiencia
-                </div>
+          </div>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">4</div>
+              <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+                Años de Experiencia
               </div>
-              <div className="space-y-1 sm:space-y-2 text-center sm:text-left">
-                <div className="text-2xl sm:text-3xl font-bold text-accent">4</div>
-                <div className="text-xs sm:text-sm font-medium uppercase tracking-wide opacity-70">
-                  Licencias de Conducir
-                </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">4</div>
+              <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+                Licencias de Conducir
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">5</div>
+              <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+                Empresas de Experiencia
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">100%</div>
+              <div className="text-sm font-medium uppercase tracking-wide opacity-70">
+                Responsabilidad
               </div>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+
+          {/* Features Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <TruckIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
               <h3 className="font-bold mb-2 text-sm sm:text-base">Experiencia en Camiones</h3>
@@ -246,7 +263,7 @@ export default function Home() {
                 establecidos.
               </p>
             </div>
-            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm sm:col-span-2">
+            <div className="p-4 sm:p-6 rounded-xl bg-white dark:bg-background-dark border border-slate-200 dark:border-slate-800 shadow-sm">
               <BriefcaseIcon className="w-6 h-6 sm:w-8 sm:h-8 text-primary mb-3 sm:mb-4" />
               <h3 className="font-bold mb-2 text-sm sm:text-base">Formación Especializada</h3>
               <p className="text-xs sm:text-sm text-slate-500">
