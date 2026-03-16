@@ -25,7 +25,12 @@
       "Bash(git commit -m \"Improve About Me section layout with centered design and balanced content distribution\")",
       "Bash(git commit -m \"Fix CV filename and references to resolve download issues\")",
       "Bash(gh workflow list)",
-      "Bash(git commit -m \"Fix CV links to include basePath for GitHub Pages compatibility\")"
+      "Bash(git commit -m \"Fix CV links to include basePath for GitHub Pages compatibility\")",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/public)",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/app)",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/src)",
+      "Bash(curl -s https://api.github.com/repos/GuyaSuna/my_profile/contents/src/app)",
+      "Bash(curl -s https://raw.githubusercontent.com/GuyaSuna/my_profile/master/src/app/page.js)"
     ],
     "deny": [],
     "ask": []

@@ -25,6 +25,15 @@ import { StarIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "CV_Jeremias_Ahmed.pdf";
+    link.download = "CV_Jeremias_Ahmed.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
       {/* Navigation */}
@@ -66,15 +75,14 @@ export default function Home() {
           </nav>
 
           {/* Desktop CV Button */}
-          <a
-            href="/Portfolio-Jeremias-Ahmed/CV_Jeremias_Ahmed.pdf"
-            download="CV_Jeremias_Ahmed.pdf"
+          <button
+            onClick={downloadCV}
             className="hidden md:flex bg-primary hover:bg-primary/90 text-white px-4 lg:px-6 py-2 rounded-lg text-sm font-bold transition-all shadow-lg shadow-primary/20 items-center gap-2"
           >
             <DocumentTextIcon className="w-4 h-4" />
             <span className="hidden lg:inline">Descargar CV</span>
             <span className="lg:hidden">CV</span>
-          </a>
+          </button>
 
           {/* Mobile Menu Button */}
           <button
@@ -130,15 +138,16 @@ export default function Home() {
                 Contacto
               </a>
               <div className="pt-4 border-t border-slate-200 dark:border-slate-700">
-                <a
-                  href="/Portfolio-Jeremias-Ahmed/CV_Jeremias_Ahmed.pdf"
-                  download="CV_Jeremias_Ahmed.pdf"
+                <button
+                  onClick={() => {
+                    downloadCV();
+                    setMobileMenuOpen(false);
+                  }}
                   className="flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg text-sm font-bold transition-all w-full"
-                  onClick={() => setMobileMenuOpen(false)}
                 >
                   <DocumentTextIcon className="w-4 h-4" />
                   Descargar CV
-                </a>
+                </button>
               </div>
             </nav>
           </div>
