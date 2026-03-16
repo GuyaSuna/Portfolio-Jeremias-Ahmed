@@ -268,35 +268,35 @@ export default function Home() {
           </div>
 
           <div className="max-w-4xl mx-auto">
-            <div className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl p-8 border border-slate-200 dark:border-slate-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-bold flex items-center gap-2">
-                  <DocumentTextIcon className="w-6 h-6 text-accent" />
+            <div className="bg-slate-50 dark:bg-slate-800/40 rounded-2xl p-4 sm:p-6 lg:p-8 border border-slate-200 dark:border-slate-700">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-6">
+                <h3 className="text-lg sm:text-xl font-bold flex items-center gap-2">
+                  <DocumentTextIcon className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                   Carta de Recomendación
                 </h3>
                 <a
                   href="/Carta recomendación Jeremías-1.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center gap-2"
+                  className="bg-accent hover:bg-accent/90 text-white px-4 py-2 rounded-lg text-sm font-bold transition-all flex items-center justify-center gap-2 w-full sm:w-auto"
                 >
                   <ShareIcon className="w-4 h-4" />
                   Ver Documento
                 </a>
               </div>
 
-              <div className="bg-white dark:bg-slate-900 rounded-lg p-6 border border-slate-200 dark:border-slate-600">
-                <div className="text-center mb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-accent/10 rounded-full flex items-center justify-center">
-                    <StarIcon className="w-8 h-8 text-accent" />
+              <div className="bg-white dark:bg-slate-900 rounded-lg p-4 sm:p-6 border border-slate-200 dark:border-slate-600">
+                <div className="text-center mb-4 sm:mb-6">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 bg-accent/10 rounded-full flex items-center justify-center">
+                    <StarIcon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
-                  <p className="text-slate-600 dark:text-slate-300 italic">
+                  <p className="text-slate-600 dark:text-slate-300 italic text-sm sm:text-base">
                     "Documento oficial que certifica mi desempeño profesional y experiencia laboral,
                     avalando mis competencias en el área de transporte y logística."
                   </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-6 mt-6">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6 mt-4 sm:mt-6">
                   <div className="space-y-3">
                     <h4 className="font-semibold text-slate-800 dark:text-slate-200">Aspectos Destacados:</h4>
                     <ul className="space-y-2 text-sm text-slate-600 dark:text-slate-400">
