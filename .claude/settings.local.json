@@ -19,7 +19,8 @@
       "Bash(git commit -m \"Use exact working configuration from my_profile repository\")",
       "Bash(git commit -m \"Improve mobile responsive design with hamburger menu, optimized layouts, and better form UX\")",
       "Bash(git commit -m \"Fix recommendation letter responsive layout to prevent button overflow on mobile\")",
-      "Bash(git commit -m \"Update Ponza Superga employment end date\")"
+      "Bash(git commit -m \"Update Ponza Superga employment end date\")",
+      "Bash(git commit -m \"Update 2025 employment history: Ponza Superga until Sept, Los Nietitos Nov-Dec\")"
     ],
     "deny": [],
     "ask": []

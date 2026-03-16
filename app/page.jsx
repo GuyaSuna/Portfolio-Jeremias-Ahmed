@@ -200,7 +200,7 @@ export default function Home() {
             <p className="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
               Chofer profesional con 4 años de experiencia en conducción de
               camiones y más de 2 años manejando maquinaria pesada. He trabajado
-              en empresas reconocidas como Ponza Superga, Veleta AgroNegocios y
+              en empresas reconocidas como Los Nietitos, Ponza Superga, Veleta AgroNegocios y
               Superga S.R.L. Me destaco por trabajar de forma ordenada, puntual
               y responsable, priorizando siempre la seguridad, el cuidado del
               vehículo y el cumplimiento de los tiempos de trabajo. Cuento con
@@ -478,14 +478,14 @@ export default function Home() {
                 Empresas donde he desarrollado mi carrera profesional
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
                   <BuildingOfficeIcon className="w-6 h-6" />
                 </div>
-                <h4 className="font-bold text-lg mb-1">Superga S.R.L</h4>
-                <p className="text-sm text-slate-500 mb-1">Auxiliar Administrativo</p>
-                <p className="text-xs text-slate-400">Enero 2021 - Dic 2021</p>
+                <h4 className="font-bold text-lg mb-1">Los Nietitos</h4>
+                <p className="text-sm text-slate-500 mb-1">Chofer</p>
+                <p className="text-xs text-slate-400">Nov 2025 - Dic 2025</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -493,7 +493,7 @@ export default function Home() {
                 </div>
                 <h4 className="font-bold text-lg mb-1">Ponza Superga</h4>
                 <p className="text-sm text-slate-500 mb-1">Chofer</p>
-                <p className="text-xs text-slate-400">Sept 2024 - Dic 2024</p>
+                <p className="text-xs text-slate-400">Ene 2025 - Sept 2025</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -501,8 +501,7 @@ export default function Home() {
                 </div>
                 <h4 className="font-bold text-lg mb-1">Veleta AgroNegocios</h4>
                 <p className="text-sm text-slate-500 mb-1">Chofer</p>
-                <p className="text-xs text-slate-400">Abril 2024 - Sept 2024
-                </p>
+                <p className="text-xs text-slate-400">Abril 2024 - Sept 2024</p>
               </div>
               <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
                 <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -510,7 +509,15 @@ export default function Home() {
                 </div>
                 <h4 className="font-bold text-lg mb-1">Ponza Superga</h4>
                 <p className="text-sm text-slate-500 mb-1">Chofer</p>
-                <p className="text-xs text-slate-400">Enero 2022 - Marzo 2024</p>
+                <p className="text-xs text-slate-400">Ene 2022 - Marzo 2024</p>
+              </div>
+              <div className="bg-white dark:bg-background-dark rounded-lg p-6 border border-slate-200 dark:border-slate-800 shadow-sm text-center hover:shadow-md transition-all">
+                <div className="size-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                  <BuildingOfficeIcon className="w-6 h-6" />
+                </div>
+                <h4 className="font-bold text-lg mb-1">Superga S.R.L</h4>
+                <p className="text-sm text-slate-500 mb-1">Auxiliar Administrativo</p>
+                <p className="text-xs text-slate-400">Ene 2021 - Dic 2021</p>
               </div>
             </div>
           </div>
